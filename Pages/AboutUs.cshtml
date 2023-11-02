@@ -1,0 +1,660 @@
+﻿@page
+@model NorthWest.Pages.AboutUsModel
+@{
+}
+
+@{
+    Layout = "";
+}
+
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+<html lang="en">
+
+
+<!-- about-us10:57-->
+<head>
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NORTHWEST</title>
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="~/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="~/libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/libs/nivo-slider/css/nivo-slider.css">
+	<link rel="stylesheet" href="~/libs/nivo-slider/css/animate.css">
+	<link rel="stylesheet" href="~/libs/nivo-slider/css/style.css">
+	<link rel="stylesheet" href="~/libs/font-material/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="~/libs/slider-range/css/jslider.css">
+	<link rel="stylesheet" href="~/libs/owl-carousel/assets/owl.carousel.min.css">
+
+	<!-- Template CSS -->
+	<link rel="stylesheet" type="text/css" href="~/css/style.css">
+	<link rel="stylesheet" type="text/css" href="~/css/reponsive.css">
+</head>
+
+<body id="about-us" class="blog">
+	<header>
+
+		
+		<!-- header desktop -->
+		<div class="header-top d-xs-none ">
+			<div class="container">
+				<div class="row">
+					<!-- logo -->
+					<div class="col-sm-2 col-md-2 d-flex align-items-center">
+						<div id="logo">
+							<a href="Index">
+								<img class="img-fluid" id="imgLogo" name="imgLogo" alt="logo">
+							</a>
+						</div>
+					</div>
+
+					<!-- menu -->
+					<div class="col-sm-5 col-md-5 align-items-center justify-content-center navbar-expand-md main-menu">
+						<div class="menu navbar collapse navbar-collapse">
+							<ul class="menu-top navbar-nav">
+
+								<li>
+									<a href="Index" class="parent">Home</a>
+								</li>
+
+								<li>
+									<a href="Blog" class="parent">Blog</a>
+								</li>
+
+								<li>
+									<a href="ContactUs" class="parent">Contact US</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- search and acount -->
+					<div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
+						<form method="get" action="#">
+
+							<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+							<input type="text" name="s" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off">
+							<button type="submit">
+								<i class="fa fa-search"></i>
+							</button>
+						</form>
+
+						<div id="block_myaccount_infos" class="hidden-sm-down dropdown">
+							<div class="myaccount-title ">
+								<a href="#acount" data-toggle="collapse" class="acount">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<span>Account</span>
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+								</a>
+							</div>
+							<div id="acount" class="collapse">
+								<div class="account-list-content">
+									<div>
+										<a class="login" href="MyAccount" rel="nofollow" title="MyAccount">
+											<i class="fa fa-cog"></i>
+											<span>My Account</span>
+										</a>
+									</div>
+									<div>
+										<a class="login" href="Login" rel="nofollow" title="Login">
+											<i class="fa fa-sign-in"></i>
+											<span>Login</span>
+										</a>
+									</div>
+									<div>
+										<a class="register" href="Register" rel="nofollow" title="Register Account">
+											<i class="fa fa-user"></i>
+											<span>Register Account</span>
+										</a>
+									</div>
+									<div>
+										<a class="check-out" href="Checkout" rel="nofollow" title="Checkout">
+											<i class="fa fa-check" aria-hidden="true"></i>
+											<span>Checkout</span>
+										</a>
+									</div>
+									<div class="link_wishlist">
+										<a href="Wishlists" title="Wishlists">
+											<i class="fa fa-heart"></i>
+											<span>Wishlists</span>
+										</a>
+									</div>
+									<div id="desktop_currency_selector" class="currency-selector groups-selector hidden-sm-down">
+										<ul class="list-inline">
+											<li>
+												<a title="Euro" rel="nofollow" href="#">EUR</a>
+											</li>
+											<li class="current list-inline-item">
+												<a title="British Pound Sterling" rel="nofollow" href="#">GBP</a>
+											</li>
+										</ul>
+									</div>
+									<div id="desktop_language_selector" class="language-selector groups-selector hidden-sm-down">
+										<ul class="list-inline">
+											<li class="list-inline-itemcurrent">
+												<a href="#">
+													<img class="img-fluid" src="~/img/home/home1-flas.jpg" alt="English" width="16" height="11">
+												</a>
+											</li>
+											<li class="list-inline-item">
+												<a href="#">
+													<img class="img-fluid" src="~/img/home/home1-flas2.jpg" alt="Italiano" width="16" height="11">
+												</a>
+											</li>
+											<li class="list-inline-item">
+												<a href="#">
+													<img class="img-fluid" src="~/img/home/home1-flas3.jpg" alt="Français" width="16" height="11">
+												</a>
+											</li>
+											<li class="list-inline-item">
+												<a href="#">
+													<img class="img-fluid" src="~/img/home/home1-flas4.jpg" alt="Español" width="16" height="11">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="desktop_cart">
+							<div class="blockcart block-cart cart-preview tiva-toggle">
+								<div class="header-cart tiva-toggle-btn">
+									<span class="cart-products-count">1</span>
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								</div>
+								<div class="dropdown-content">
+									<div class="cart-content">
+										<table>
+											<tbody>
+												<tr>
+													<td class="product-image">
+														<a href="product-detail.html">
+															<img src="~/img/product/5.jpg" alt="Product">
+														</a>
+													</td>
+													<td>
+														<div class="product-name">
+															<a href="product-detail.html">Organic Strawberry Fruits</a>
+														</div>
+														<div>
+															2 x
+															<span class="product-price">£28.98</span>
+														</div>
+													</td>
+													<td class="action">
+														<a class="remove" href="#">
+															<i class="fa fa-trash-o" aria-hidden="true"></i>
+														</a>
+													</td>
+												</tr>
+												<tr class="total">
+													<td colspan="2">Total:</td>
+													<td>£92.96</td>
+												</tr>
+
+												<tr>
+													<td colspan="3" class="d-flex justify-content-center">
+														<div class="cart-button">
+															<a href="Cart" title="View Cart">View Cart</a>
+															<a href="Checkout" title="Checkout">Checkout</a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- main content -->
+	<div class="main-content">
+		<div id="wrapper-site">
+			<div id="content-wrapper">
+
+				<!-- breadcrumb -->
+				<nav class="breadcrumb-bg">
+					<div class="container no-index">
+						<div class="breadcrumb">
+							<ol>
+								<li>
+									<a href="Index">
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a href="AboutUs">
+										<span>About Us</span>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</nav>
+				<div id="main">
+					<div class="page-home">
+						<div class="container">
+							<div class="about-us-content">
+
+								<h1 class="title-page">About Us</h1>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-6 right">
+										<a href="#">
+											<img class="img-fluid" src="~/img/other/1.jpg" alt="#" />
+										</a>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 left">
+										<div class="cms-block f-right">
+											<h3 class="page-subheading">WHO WE ARE</h3>
+											<p>
+												Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin, lorem quis biben
+												dum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+												sed odio sit amet nibh vultate cursus a sit amet mauris. Duis sed odio sit
+												amet nibh vultate cursus a sit amet mauris.
+											</p>
+											<p>
+												Proin gravida nibh vel velit auctor aliquet. nec sagittis sem nibh id elit. Duis
+												sed odio sit amet nibh vultate cursus a sit amet mauris. Duis sed odio sit
+												amet nibh vultate cursus a sit amet mauris.
+											</p>
+
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 right">
+										<div class="cms-block f-left">
+											<h3 class="page-subheading">WHAT WE DO</h3>
+											<p>
+												Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin, lorem quis biben
+												dum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+												sed odio sit amet nibh vultate cursus a sit amet mauris. Duis sed odio sit
+												amet nibh vultate cursus a sit amet mauris.
+											</p>
+											<p>
+												Proin gravida nibh vel velit auctor aliquet, nec sagittis sem nibh id elit. Duis
+												sed odio sit amet nibh vultate cursus a sit amet mauris. Duis sed odio sit
+												amet nibh vultate cursus a sit amet mauris.
+											</p>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-6 left">
+										<a href="#">
+											<img class="img-fluid" src="~/img/other/2.jpg" alt="#" />
+										</a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer class="footer-one">
+		<div class="inner-footer">
+			<div class="container">
+				<div class="footer-top col-lg-12 col-xs-12">
+					<div class=" row">
+						<div class="nov-html col-lg-4 col-sm-12 col-xs-12">
+							<div class="block">
+								<div class="block-content">
+									<p class="logo-footer">
+										<img id="imgLogoFooter" name="imgLogoFooter" alt="img">
+									</p>
+									<p class="content-logo">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt
+										ut labore et dolore magna aliqua. Ut enim ad minim
+									</p>
+								</div>
+							</div>
+							<div class="block">
+								<div class="block-content">
+									<ul>
+										<li>
+											<a href="AboutUs">About Us</a>
+										</li>
+										<li>
+											<a href="ContactUs">Contact Us</a>
+										</li>
+										<li>
+											<a href="MyAccount">My Account</a>
+										</li>
+										<li>
+											<a href="WishLists">Wish Lists</a>
+										</li>
+										<li>
+											<a href="Cart">Cart</a>
+										</li>
+										<li>
+											<a href="Checkout">Checkout</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class="nov-html col-lg-4 col-sm-6">
+							<div class="block m-top">
+								<div class="title-block">
+									Contact Us
+								</div>
+								<div class="block-content">
+									<div class="contact-us">
+										<div class="title-content">
+											<i class="fa fa-home" aria-hidden="true"></i>
+											<span>Address :</span>
+										</div>
+										<div class="content-contact address-contact">
+											<label class="form-label" id="lblAddress" name="lblAddress"></label>
+										</div>
+									</div>
+									<div class="contact-us">
+										<div class="title-content">
+											<i class="fa fa-envelope" aria-hidden="true"></i>
+											<span>Email :</span>
+										</div>
+										<div class="content-contact mail-contact">
+											<label class="form-label" id="lblEmail" name="lblEmail"></label>
+										</div>
+									</div>
+									<div class="contact-us">
+										<div class="title-content">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>Hotline :</span>
+										</div>
+										<div class="content-contact phone-contact">
+											<label class="form-label" id="lblPhone" name="lblPhone"></label>
+										</div>
+									</div>
+									<div class="contact-us">
+										<div class="title-content">
+											<i class="fa fa-clock-o" aria-hidden="true"></i>
+											<span>Opening Hours :</span>
+										</div>
+										<div class="content-contact hours-contact">
+											<label class="form-label" id="lblWhours" name="lblWhours"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tiva-modules col-lg-4 col-md-6">
+							<div class="block m-top">
+								<div class="block-content">
+									<div class="title-block">Newsletter</div>
+									<div class="sub-title">
+										Sign up to our newsletter to get the latest articles, lookbooks voucher codes direct
+										to your inbox
+									</div>
+									<div class="block-newsletter">
+										<form class="row g-3 requires-validation">
+											<div class="input-group">
+												<input type="text" class="form-control" id="EmailAddress" placeholder="Enter Your Email" required size="10">
+												<span class="input-group-btn">
+													<button class="effect-btn btn btn-secondary" id="myButton" type="submit">
+														subscribe
+													</button>
+												</span>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="block m-top1">
+								<div class="block-content">
+									<div class="social-content">
+										<div class="title-block">
+											Follow us on
+										</div>
+										<div id="social-block">
+											<div class="social">
+												<ul class="list-inline mb-0 justify-content-end">
+													<li class="list-inline-item mb-0">
+														<a id="fb" href="#" target="_blank">
+															<i class="fa fa-facebook"></i>
+														</a>
+													</li>
+													<li class="list-inline-item mb-0">
+														<a id="twr" href="#" target="_blank">
+															<i class="fa fa-twitter"></i>
+														</a>
+													</li>
+													<li class="list-inline-item mb-0">
+														<a id="ggle" href="#" target="_blank">
+															<i class="fa fa-google"></i>
+														</a>
+													</li>
+													<li class="list-inline-item mb-0">
+														<a id="igm" href="#" target="_blank">
+															<i class="fa fa-instagram"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block m-top1">
+								<div class="block-content">
+									<div class="payment-content">
+										<div class="title-block">
+											Payment accept
+										</div>
+										<div class="payment-image">
+											<img class="img-fluid" src="~/img/home/payment.png" alt="img">
+										</div>
+									</div>
+									<!-- Popup newsletter -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="tiva-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="text-center col-lg-12 ">
+						<span>
+							<a target="_blank" href="">Copyright © MÖBEL Home Furnishings . All Rights Reserved </a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- back top top -->
+	<div class="back-to-top">
+		<a href="#">
+			<i class="fa fa-long-arrow-up"></i>
+		</a>
+	</div>
+
+	
+	<!-- Page Loader -->
+	<div id="page-preloader">
+		<div class="page-loading">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+	</div>
+
+	<!-- Vendor JS -->
+	<script src="~/libs/jquery/jquery.min.js"></script>
+	<script src="~/libs/popper/popper.min.js"></script>
+	<script src="~/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/libs/nivo-slider/js/jquery.nivo.slider.js"></script>
+	<script src="~/libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="~/libs/slider-range/js/tmpl.js"></script>
+	<script src="~/libs/slider-range/js/jquery.dependClass-0.1.js"></script>
+	<script src="~/libs/slider-range/js/draggable-0.1.js"></script>
+	<script src="~/libs/slider-range/js/jquery.slider.js"></script>
+
+	<!-- Template JS -->
+	<script src="~/js/theme.js"></script>
+
+	<!-- Alertify ------------------------------------------------------------------------------------------------------->
+	<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+	<!-- Default theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+	<!-- Semantic UI theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+	<!--
+		RTL version
+	-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css" />
+	<!-- Default theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css" />
+	<!-- Semantic UI theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css" />
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css" />
+
+	<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			const commonUrl = @Json.Serialize(@Configuration.GetSection("URL").GetSection("Name").Value);
+			$.ajax({
+				type: "GET",
+				url: commonUrl + '/api/CompanyInfo',
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: OnSuccess,
+				error: OnErrorCall
+			});
+			function OnSuccess(response) {
+				var address = JSON.stringify(response[0].Address);
+				var email = JSON.stringify(response[0].Email);
+				var phone = JSON.stringify(response[0].Phone);
+				var wHours = JSON.stringify(response[0].WorkingHours);
+				var img = JSON.stringify(response[0].Image);
+				var fbk = JSON.stringify(response[0].Facebook);				
+				var twrk = JSON.stringify(response[0].Twitter);
+				var ggek = JSON.stringify(response[0].Google);
+				var igmk = JSON.stringify(response[0].Instagram);
+
+				$('#lblAddress').text(address.replace(/['"]+/g, ''));
+				$('#lblEmail').text(email.replace(/['"]+/g, ''));
+				$('#lblPhone').text(phone.replace(/['"]+/g, ''));
+				$('#lblWhours').text(wHours.replace(/['"]+/g, ''));
+				$('#imgLogo').attr('src', `data:image/png/jpeg;base64,${img.replace(/['"]+/g, '')}`);
+				$('#imgLogoFooter').attr('src', `data:image/png/jpeg;base64,${img.replace(/['"]+/g, '')}`);
+				$('#fb').attr('href', fbk.replace(/['"]+/g, ''));
+				$('#twr').attr('href', twrk.replace(/['"]+/g, ''));
+				$('#ggle').attr('href', ggek.replace(/['"]+/g, ''));
+				$('#igm').attr('href', igmk.replace(/['"]+/g, ''));
+			}
+			function OnErrorCall(response) {
+				//alert('Error');
+			}
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		$("#myButton").on("click", function (e) {
+			if ($.trim($("#EmailAddress").val()) == "") {
+				$("#EmailAddress").attribute(required) = true;
+				return false;
+			}
+			else {
+				var VAL = $("#EmailAddress").val().toLowerCase();
+				var email = /^[A-Z0-9._%+-]+@@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+				if (!email.test(VAL)) {
+					alertify.warning('Invalid Email Address');
+					return false;
+				}
+				e.preventDefault();
+				const commonUrl = @Json.Serialize(@Configuration.GetSection("URL").GetSection("Name").Value);
+				var ea = $("#EmailAddress").val().toLowerCase();
+				$.ajax({
+					type: "GET",
+					url: commonUrl + '/api/Newsletter/' + ea,
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: OnSuccess,
+					error: OnErrorCall
+				});
+				function OnSuccess(response) {
+					if (response.length == 1) {
+						alertify.warning('Email Address Already Subscribed');
+						$("#EmailAddress").focus();
+					}
+					else {
+						var datas = { "Email": $("#EmailAddress").val().toLowerCase() }
+						var jsonData = JSON.stringify(datas);
+						$.ajax({
+							type: "POST",
+							url: commonUrl + '/api/Newsletter',
+							data: jsonData,
+							contentType: "application/json; charset=utf-8",
+							dataType: "json",
+							success: OnSuccess,
+							error: OnErrorCall
+						});
+						function OnSuccess(response) {
+							alertify.success('Email Address Subscribed Successfully');
+							$("#EmailAddress").val('');
+							$("#EmailAddress").focus();
+						}
+						function OnErrorCall(response) {
+							alertify.error('Error');
+							$("#EmailAddress").focus();
+						}
+					}
+				}
+				function OnErrorCall(response) {
+					alertify.error('Error');
+					$("#EmailAddress").focus();
+				}
+			}
+		});
+	</script>
+
+</body>
+
+
+<!-- about-us11:09-->
+</html>
